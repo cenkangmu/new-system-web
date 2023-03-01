@@ -1,0 +1,11 @@
+.sidebar-logo{
+    margin: 10px;
+    background: rgba(255,255,255,.3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    transition: all .5s;
+    overflow: hidden;
+}

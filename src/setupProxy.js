@@ -1,0 +1,9 @@
+const {createProxyMiddleware} = require('http-proxy-middleware')
+//反向代理
+module.exports = function (app) {
+	app.use(createProxyMiddleware(process.env.REACT_APP_BASE_URL , {
+		target: process.env.REACT_APP_PATHNAME,
+		changeOrigin: true,
+		pathRewrite: {['^' + process.env.REACT_APP_BASE_URL]: ''}
+	}))
+}

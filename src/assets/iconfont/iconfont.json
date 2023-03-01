@@ -1,0 +1,37 @@
+{
+  "id": "3919131",
+  "name": "新闻系统",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7712708",
+      "name": "password",
+      "font_class": "password",
+      "unicode": "e734",
+      "unicode_decimal": 59188
+    },
+    {
+      "icon_id": "7712740",
+      "name": "show2",
+      "font_class": "show",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "7712744",
+      "name": "username",
+      "font_class": "username",
+      "unicode": "e73f",
+      "unicode_decimal": 59199
+    },
+    {
+      "icon_id": "15963516",
+      "name": "关闭查看",
+      "font_class": "guanbichakan",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    }
+  ]
+}
