@@ -8,4 +8,5 @@
     height: 40px;
     transition: all .5s;
     overflow: hidden;
+    border-radius: 10px;
 }
