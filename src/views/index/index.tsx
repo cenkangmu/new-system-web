@@ -11,7 +11,7 @@ import routeComponents from "../../router/IndexRouter";
 
 const Index = (props: any) => {
   useEffect(() => {
-    props.dispatch({type: 'getMenus'})
+    props.dispatch({type: 'getUserMenus'})
   }, [])
 
   const RouteList = useMemo(() => {
@@ -57,4 +57,4 @@ const Index = (props: any) => {
   );
 };
 
-export default connect((state: any) => ({menus: state.system.menus}))(Index);
+export default connect((state: any) => ({menus: state.system.userMenus}))(Index);

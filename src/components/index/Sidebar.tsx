@@ -31,16 +31,14 @@ function resetMenus(list: any, id: (number | null) = null) {
 }
 
 const Sidebar = (props: any) => {
-  const [menuTree, setMenuTree] = useState<any>([])
   const selectedKey = props.location.pathname
 
   const history = useHistory()
-  useMemo(() => {
-    setMenuTree(resetMenus(props.menus))
-
+  const menuTree = useMemo(() => {
+    return resetMenus(props.menus)
   }, [props.menus])
   return (
-      <Layout.Sider trigger={null} collapsible collapsed={props.collapsed}>
+      <Layout.Sider width={240} trigger={null} collapsible collapsed={props.collapsed}>
         <div className="sidebar-logo" title={'新闻管理发布平台'}>
           {props.collapsed?'新闻':'新闻管理发布平台'}
         </div>
@@ -62,6 +60,6 @@ const Sidebar = (props: any) => {
 };
 
 export default connect((state: any) => ({
-  menus: state.system.menus,
+  menus: state.system.userMenus,
   collapsed: state.system.collapsed
 }))(withRouter(Sidebar));

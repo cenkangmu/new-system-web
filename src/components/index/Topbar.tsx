@@ -41,11 +41,13 @@ const Topbar = (props: any) => {
         <div style={{float: 'right'}}>
           <span style={{marginRight: 10}}>欢迎 {user.username} 登录</span>
           <Dropdown menu={{items}}>
-            <Avatar size="large" icon={
+            {
               user.head_img ?
-                  <img src={process.env.REACT_APP_BASE_URL + user.head_img}/>
-                  : <UserOutlined/>
-            }/>
+                  <Avatar size="large" src={user.head_img} /> :
+                  <Avatar size="large" icon={<UserOutlined/>}/>
+            }
+
+
           </Dropdown>
         </div>
         <Modal cancelText={'取消'} okText={'确定'} title="提示" open={isModalOpen} onOk={logout}
